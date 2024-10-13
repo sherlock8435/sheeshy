@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="height: 0px">
+    <form id="form1" runat="server">
+    <div>
+        <asp:Label ID="lbl_title" runat="server" Font-Bold="True" Font-Names="Aharoni" Font-Size="XX-Large"></asp:Label>
+        <br />
+        <br />
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" RenderingMode="List" OnMenuItemClick="Menu1_MenuItemClick">
+            <DynamicItemTemplate>
+                <%# Eval("Text") %>
+            </DynamicItemTemplate>
+            <Items>
+                <asp:MenuItem NavigateUrl="~/forms/home.aspx" Text="home" Value="home"></asp:MenuItem>
+                <asp:MenuItem Text="profile" Value="profile">
+                    <asp:MenuItem NavigateUrl="~/forms/sign_in.aspx" Text="log in" Value="log in"></asp:MenuItem>
+                    <asp:MenuItem Text="Sign up" Value="Sign up" NavigateUrl="~/forms/Sign Up.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/forms/contact_us.aspx" Text="contact us" Value="contact us"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/forms/about_us.aspx" Text="about us" Value="about us"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
